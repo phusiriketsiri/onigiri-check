@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff7ed">
+<meta name="description" content="Onigiri Check ช่วยทำความเข้าใจความเสี่ยงตั้งครรภ์และเวลาที่เหมาะสมในการตรวจอย่างอ่อนโยนและเป็นส่วนตัว">
+<title>Onigiri Check 🍙 | เช็กอย่างสบายใจ</title>
+<style>
+:root{--ink:#3d302b;--muted:#766761;--pink:#f7d9d7;--peach:#ffe9d5;--cream:#fffaf2;--red:#9e4545;--green:#3e6e56;--line:#eaded2;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff5e9 0,#fffaf5 45%,#fff 100%);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:#8a4b42;text-underline-offset:3px}header{max-width:960px;margin:auto;padding:22px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:850;font-size:1.15rem;letter-spacing:-.3px}.brand span{margin-right:8px}nav a{margin-left:16px;font-size:.95rem}
+main{max-width:760px;margin:0 auto;padding:12px 18px 56px}.hero{text-align:center;padding:14px 0 22px}.mascot{display:inline-flex;align-items:center;justify-content:center;width:100px;height:100px;background:var(--white);border:3px solid #f5d9c9;border-radius:32px;box-shadow:0 8px 0 #f3e4d7;font-size:55px;transform:rotate(-4deg);margin-bottom:12px}.eyebrow{font-size:.82rem;font-weight:800;color:#a15b50;letter-spacing:1.2px}.hero h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:8px 0 12px;letter-spacing:-1px}.hero p{max-width:560px;margin:0 auto;color:var(--muted)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,30px);margin:16px 0;box-shadow:0 8px 24px #6e4c3410}.card h2{font-size:1.22rem;margin:0 0 8px}.hint{font-size:.92rem;color:var(--muted);margin:0 0 16px}.field{margin:18px 0}.field>label,.field legend{font-weight:750;display:block;margin-bottom:8px}.field input[type=date],.field input[type=number],.field select{width:100%;border:1px solid #d8c9bd;border-radius:12px;padding:12px 13px;background:#fffdfb;color:var(--ink);font:inherit}.field input:focus,.field select:focus,button:focus-visible,a:focus-visible{outline:3px solid #e7a8a0;outline-offset:2px}fieldset{border:0;padding:0;margin:0}.options{display:grid;gap:9px}.option{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);padding:12px 13px;border-radius:13px;cursor:pointer;background:#fffdfb}.option:has(input:checked){border-color:#ce8b82;background:#fff5f2}.option input{margin-top:6px;accent-color:#b66e64}.option span{flex:1}.small{font-size:.86rem;color:var(--muted)}.btn{display:block;width:100%;border:0;border-radius:15px;background:#a95f55;color:white;font:inherit;font-weight:800;padding:14px 18px;cursor:pointer;box-shadow:0 4px 0 #85473f}.btn:hover{background:#914e46}.btn.secondary{margin-top:10px;background:#f6e7df;color:#68443e;box-shadow:none}.result{display:none;border:2px solid #e7c9b7;background:#fff8f1}.result.show{display:block}.result h2{font-size:1.35rem}.result ul{padding-left:22px}.result li{margin:8px 0}.pill{display:inline-block;background:#f8e5dc;border-radius:100px;padding:4px 10px;font-size:.82rem;font-weight:800;margin-bottom:10px}.urgent{border-color:#e8b0aa;background:#fff5f4}.urgent .pill{background:#f8d9d6;color:#842f2f}.safe-note{background:#f3f7f0;border-radius:14px;padding:13px 15px;color:#3c6048;font-size:.92rem}.footer{text-align:center;color:var(--muted);font-size:.88rem;padding:18px 0}.hidden{display:none!important}
+@media(max-width:520px){header{align-items:flex-start}nav{display:flex;flex-direction:column;gap:4px;text-align:right}nav a{margin:0}.card{border-radius:18px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><span>🍙</span>Onigiri Check</div><nav><a href="#check">เริ่มเช็ก</a><a href="sources.html">แหล่งข้อมูล</a></nav></header>
+<main>
+<section class="hero">
+<div class="mascot" aria-label="มาสคอตข้าวปั้น" role="img">🍙</div>
+<div class="eyebrow">A LITTLE CHECK-IN, WITH CARE</div>
+<h1>ค่อย ๆ เช็กไปด้วยกันนะ</h1>
+<p>ถ้าประจำเดือนยังไม่มาและกำลังกังวล เราจะช่วยเรียบเรียงข้อมูลและบอกว่าเมื่อไหร่ควรตรวจครรภ์ โดยไม่ตัดสินคุณ 🤍</p>
+</section>
+<section class="card" id="check">
+<h2>🍵 ก่อนเริ่ม ขอถามนิดเดียวนะ</h2>
+<p class="hint">ตอบเท่าที่สะดวกได้ คำตอบจะประมวลผลในเบราว์เซอร์นี้เท่านั้น เว็บไซต์นี้ไม่บันทึกคำตอบลงฐานข้อมูล</p>
+<form id="checkForm">
+<div class="field">
+<label for="periodDate">1. วันแรกของประจำเดือนครั้งล่าสุด (ถ้าจำได้)</label>
+<input id="periodDate" name="periodDate" type="date">
+<div class="small">ถ้าจำไม่ได้ สามารถข้ามข้อนี้ได้</div>
+</div>
+<div class="field">
+<label for="cycle">2. โดยทั่วไป รอบเดือนของคุณยาวประมาณกี่วัน?</label>
+<select id="cycle" name="cycle"><option value="">ไม่แน่ใจ / รอบเดือนไม่สม่ำเสมอ</option><option value="21">21 วัน</option><option value="24">24 วัน</option><option value="26">26 วัน</option><option value="28">28 วัน</option><option value="30">30 วัน</option><option value="32">32 วัน</option><option value="35">35 วัน</option><option value="40">40 วันหรือมากกว่า</option></select>
+</div>
+<div class="field">
+<fieldset><legend>3. ตั้งแต่ประจำเดือนครั้งล่าสุด มีเหตุการณ์ที่อสุจิอาจเข้าสู่ช่องคลอดหรือไม่?</legend>
+<div class="options">
+<label class="option"><input type="radio" name="exposure" value="yes" required><span>มี เช่น สอดใส่ทางช่องคลอดโดยไม่ใช้ถุงยาง หรือถุงยางแตก/หลุด</span></label>
+<label class="option"><input type="radio" name="exposure" value="no"><span>ไม่มีเหตุการณ์ที่อสุจิอาจเข้าสู่ช่องคลอด</span></label>
+<label class="option"><input type="radio" name="exposure" value="unsure"><span>ไม่แน่ใจ</span></label>
+</div></fieldset>
+</div>
+<div id="eventFields" class="hidden">
+<div class="field"><label for="eventDate">วันที่เกิดเหตุการณ์ล่าสุดที่กังวล</label><input id="eventDate" type="date"><div class="small">เลือกวันที่ใกล้เคียงที่สุดก็ได้</div></div>
+<div class="field"><fieldset><legend>ตอนนั้นมีการคุมกำเนิดหรือไม่?</legend><div class="options">
+<label class="option"><input type="radio" name="contraception" value="effective"><span>ใช้ถุงยางตลอดและไม่แตก/หลุด หรือใช้วิธีคุมกำเนิดอย่างถูกต้อง</span></label>
+<label class="option"><input type="radio" name="contraception" value="problem"><span>ไม่ได้คุมกำเนิด หรือมีปัญหา เช่น ถุงยางแตก/หลุด หรือลืมยา</span></label>
+<label class="option"><input type="radio" name="contraception" value="unsure"><span>ไม่แน่ใจ</span></label>
+</div></fieldset></div>
+</div>
+<div class="field">
+<fieldset><legend>4. ตอนนี้ประจำเดือนเลยวันที่คาดว่าจะมาหรือยัง?</legend><div class="options">
+<label class="option"><input type="radio" name="late" value="yes" required><span>เลยกำหนดแล้ว</span></label>
+<label class="option"><input type="radio" name="late" value="no"><span>ยังไม่ถึงกำหนด</span></label>
+<label class="option"><input type="radio" name="late" value="unsure"><span>ไม่แน่ใจว่าควรมาเมื่อไหร่</span></label>
+</div></fieldset>
+</div>
+<div class="field"><fieldset><legend>5. มีอาการปวดท้องน้อยรุนแรง ปวดข้างเดียวมาก เวียนศีรษะ/เป็นลม ปวดปลายไหล่ หรือเลือดออกผิดปกติร่วมด้วยไหม?</legend><div class="options">
+<label class="option"><input type="radio" name="warning" value="yes" required><span>มีอย่างน้อยหนึ่งอาการ</span></label>
+<label class="option"><input type="radio" name="warning" value="no"><span>ไม่มี</span></label>
+</div><p class="small">ถามข้อนี้เพื่อความปลอดภัย ไม่ได้ใช้วินิจฉัยโรค</p></fieldset></div>
+<button class="btn" type="submit">ดูคำแนะนำของฉัน ✨</button>
+<button class="btn secondary" type="reset">เริ่มตอบใหม่</button>
+</form>
+</section>
+<section class="card result" id="result" aria-live="polite" tabindex="-1">
+<div class="pill">คำแนะนำจาก Onigiri</div><h2 id="resultTitle"></h2><div id="resultBody"></div>
+<p class="small">ข้อมูลนี้เป็นคำแนะนำทั่วไป ไม่สามารถยืนยันหรือตัดการตั้งครรภ์หรือภาวะอื่น ๆ ได้</p>
+</section>
+<section class="card">
+<h2>💗 เรื่องที่อยากให้รู้ไว้</h2>
+<ul>
+<li>อาการก่อนมีประจำเดือนกับอาการเริ่มตั้งครรภ์อาจคล้ายกัน อาการอย่างเดียวบอกไม่ได้แน่นอนว่าตั้งครรภ์หรือไม่</li>
+<li>ชุดตรวจครรภ์ส่วนใหญ่ใช้ได้ตั้งแต่วันแรกที่ประจำเดือนขาด หากไม่รู้กำหนดประจำเดือน ให้ตรวจอย่างน้อย 21 วันหลังเหตุการณ์เสี่ยงครั้งล่าสุด</li>
+<li>ความเครียด การเปลี่ยนแปลงน้ำหนัก การออกกำลังกายหนัก และสาเหตุอื่น ๆ ก็อาจทำให้ประจำเดือนเลื่อนได้</li>
+</ul>
+<div class="safe-note">คุณไม่จำเป็นต้องจัดการความกังวลนี้คนเดียว หากไม่แน่ใจ ลองปรึกษาบุคลากรทางการแพทย์หรือผู้ใหญ่ที่คุณไว้ใจได้</div>
+</section>
+<footer class="footer">ทำด้วยความใส่ใจ 🍙 · <a href="sources.html">อ่านแหล่งข้อมูลทางการแพทย์</a><br>คำตอบไม่ได้ถูกส่งหรือบันทึกโดยเว็บไซต์นี้</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const form=$('checkForm'), eventFields=$('eventFields'), result=$('result');
+const today=new Date(); today.setHours(0,0,0,0);
+for(const el of document.querySelectorAll('input[type=date]')) el.max=today.toISOString().slice(0,10);
+document.querySelectorAll('input[name=exposure]').forEach(el=>el.addEventListener('change',()=>{
+ const show=document.querySelector('input[name=exposure]:checked')?.value!=='no';
+ eventFields.classList.toggle('hidden',!show);
+ document.querySelectorAll('input[name=contraception]').forEach(x=>{x.required=show});
+ $('eventDate').required=show;
+}));
+form.addEventListener('reset',()=>setTimeout(()=>{eventFields.classList.add('hidden');result.classList.remove('show');document.querySelectorAll('input[name=contraception]').forEach(x=>x.required=false);$('eventDate').required=false},0));
+const daysBetween=(a,b)=>Math.floor((b-a)/86400000);
+function addDays(date,days){const d=new Date(date);d.setDate(d.getDate()+days);return d}
+function fmt(d){return d.toLocaleDateString('th-TH',{day:'numeric',month:'long',year:'numeric'})}
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ const exposure=document.querySelector('input[name=exposure]:checked').value;
+ const late=document.querySelector('input[name=late]:checked').value;
+ const warning=document.querySelector('input[name=warning]:checked').value;
+ const period=$('periodDate').value?new Date($('periodDate').value+'T00:00:00'):null;
+ const event=$('eventDate').value?new Date($('eventDate').value+'T00:00:00'):null;
+ const contraception=document.querySelector('input[name=contraception]:checked')?.value||'unsure';
+ const cycle=parseInt($('cycle').value,10);
+ let title='', html='', urgent=warning==='yes';
+ if(urgent){
+  title='ขอให้ให้ความสำคัญกับอาการก่อนนะ';
+  html='<p>หากมีอาการปวดท้องน้อยรุนแรงหรือปวดข้างเดียวมาก เวียนศีรษะ/เป็นลม ปวดปลายไหล่ หรือเลือดออกผิดปกติ ควรขอความช่วยเหลือทางการแพทย์โดยด่วน โดยเฉพาะหากอาจตั้งครรภ์ อย่ารอผลชุดตรวจเพื่อขอความช่วยเหลือ</p>';
+ }else if(exposure==='no'){
+  title='จากคำตอบ ยังไม่พบเหตุการณ์เสี่ยงที่ระบุ';
+  html='<p>หากไม่มีการสอดใส่ทางช่องคลอดและไม่มีน้ำอสุจิสัมผัสบริเวณปากช่องคลอด โอกาสตั้งครรภ์โดยทั่วไปต่ำมาก แต่ถ้าไม่แน่ใจว่าเกิดอะไรขึ้น สามารถปรึกษาบุคลากรทางการแพทย์ได้</p>';
+ }else{
+  title=exposure==='unsure'?'ยังสรุปความเสี่ยงแน่นอนไม่ได้':'ควรใช้ชุดตรวจเพื่อให้ได้คำตอบที่ชัดเจนกว่าอาการ';
+  if(contraception==='effective') html+='<p>การคุมกำเนิดที่ใช้ถูกต้องช่วยลดโอกาสตั้งครรภ์ได้ แต่ไม่มีวิธีใดรับประกันได้ทั้งหมด หากประจำเดือนขาดหรือยังไม่สบายใจ การตรวจครรภ์เป็นขั้นตอนที่เหมาะสม</p>';
+  else if(contraception==='problem') html+='<p>เมื่อไม่ได้คุมกำเนิดหรือมีปัญหากับวิธีคุมกำเนิด อาจมีโอกาสตั้งครรภ์ได้ ไม่สามารถคำนวณเป็นเปอร์เซ็นต์ที่เชื่อถือได้จากข้อมูลนี้</p>';
+  else html+='<p>เพราะยังไม่แน่ใจเรื่องเหตุการณ์หรือการคุมกำเนิด เราจึงไม่ควรเดาเป็นเปอร์เซ็นต์ หากกังวล การตรวจตามช่วงเวลาที่เหมาะสมจะช่วยให้ได้ข้อมูลชัดเจนกว่า</p>';
+  if(event){
+   const elapsed=daysBetween(event,today);
+   if(elapsed<0){html+='<p>วันที่เหตุการณ์ที่เลือกอยู่ในอนาคต ลองตรวจสอบวันที่อีกครั้ง</p>'}
+   else if(elapsed>=21){html+='<p><strong>เรื่องเวลาตรวจ:</strong> ผ่านมาแล้ว '+elapsed+' วันนับจากเหตุการณ์ล่าสุด จึงสามารถตรวจครรภ์ได้ตามคำแนะนำสำหรับกรณีไม่ทราบกำหนดประจำเดือน</p>'}
+   else{html+='<p><strong>เรื่องเวลาตรวจ:</strong> ผ่านมา '+elapsed+' วันจากเหตุการณ์ล่าสุด หากไม่ทราบว่าประจำเดือนควรมาเมื่อไหร่ ให้ตรวจเมื่อครบ 21 วันหลังเหตุการณ์ (ประมาณ '+fmt(addDays(event,21))+'). หากประจำเดือนขาดแล้ว สามารถตรวจได้ตั้งแต่ตอนนี้ แต่ผลลบที่ตรวจเร็วเกินไปอาจยังไม่ชัดเจน</p>'}
+  }else html+='<p><strong>เรื่องเวลาตรวจ:</strong> หากประจำเดือนขาด ให้ตรวจตั้งแต่วันแรกที่ขาดได้ หากไม่รู้ว่าประจำเดือนควรมาเมื่อไหร่ ให้ตรวจอย่างน้อย 21 วันหลังเหตุการณ์เสี่ยงครั้งล่าสุด</p>';
+ }
+ if(late==='yes' && exposure!=='no' && !urgent) html+='<p>เนื่องจากประจำเดือนเลยกำหนดแล้ว คุณสามารถตรวจครรภ์ได้ตอนนี้ ทำตามวิธีใช้บนกล่องอย่างเคร่งครัด</p>';
+ if(period && cycle && late==='unsure'){
+  const due=addDays(period,cycle);
+  html+='<p>จากวันที่เริ่มประจำเดือนครั้งล่าสุดและรอบเดือนที่เลือก วันคาดการณ์โดยคร่าว ๆ คือ <strong>'+fmt(due)+'</strong> แต่รอบเดือนอาจคลาดเคลื่อนได้ วันที่นี้จึงไม่ใช่การยืนยันว่าประจำเดือนควรมาแน่นอน</p>';
+ }
+ html+='<h3>ถ้าตรวจแล้วผลเป็นลบ</h3><ul><li>หากตรวจเร็วเกินไป ให้ตรวจซ้ำอีกไม่กี่วัน หรือเมื่อครบ 21 วันหลังเหตุการณ์เสี่ยง</li><li>หากตรวจซ้ำแล้วยังเป็นลบแต่ประจำเดือนยังไม่มา ควรปรึกษาบุคลากรทางการแพทย์</li></ul>';
+ $('resultTitle').textContent=title;$('resultBody').innerHTML=html;result.classList.add('show');result.classList.toggle('urgent',urgent);result.focus();result.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+</body></html>
